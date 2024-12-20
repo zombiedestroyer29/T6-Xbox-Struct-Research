@@ -1,3 +1,35 @@
+//yes I got these D3D9 structs from Skate 2, so what
+//you could realistically use your own from the xbox 360 SDK
+struct D3DResource
+{
+    unsigned int Common;
+    unsigned int ReferenceCount;
+    unsigned int Fence;
+    unsigned int ReadFence;
+    unsigned int Identifier;
+    unsigned int BaseFlush;
+};
+
+struct D3DVertexBuffer : D3DResource {};
+
+struct D3DIndexBuffer : D3DResource
+{
+    unsigned int Address;
+    unsigned int Size;
+};
+
+struct GfxWorldVertexData
+{
+    struct GfxWorldVertex * vertices;
+    struct D3DVertexBuffer worldVb;
+};
+
+struct GfxWorldVertexLayerData
+{
+    unsigned int * data;
+    struct D3DVertexBuffer layerVb;
+};
+
 struct GfxWorldDraw
 {
   unsigned int reflectionProbeCount;
@@ -9,12 +41,12 @@ struct GfxWorldDraw
   $40E81F39AA7EA8DA6EF0A198775F1226 ___u6;
   unsigned int vertexCount;
   unsigned int vertexDataSize0;
-  GfxWorldVertexData0 vd0;
+  GfxWorldVertexData vd;
   unsigned int vertexDataSize1;
-  GfxWorldVertexData1 vd1;
+  GfxWorldVertexLayerData vld;
   int indexCount;
   unsigned __int16 *indices;
-  void *indexBuffer;
+  D3DIndexBuffer indexBuffer;
 };
 
 
