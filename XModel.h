@@ -26,7 +26,6 @@ struct XModel
   float *himipInvSqRadii;
   int memUsage;
   int flags;
-  bool bad;
   PhysPreset *physPreset;
   unsigned __int8 numCollmaps;
   Collmap *collmaps;
