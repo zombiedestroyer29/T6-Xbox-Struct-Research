@@ -6,6 +6,6 @@ struct MaterialsForMipCount
 
 struct TextureList //Xbox-only asset, sizeof 0x24
 {
-    const char* v_str; //probably name
+    const char* name; //probably name
     MaterialsForMipCount v_MaterialsForMipCountArray[4];
 };

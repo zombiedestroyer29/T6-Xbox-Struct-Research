@@ -1,5 +1,5 @@
 struct MaterialPixelShader
 {
-    const char* v_str;
+    const char* name;
     MaterialPixelShaderProgram shaderProgram;
 };
