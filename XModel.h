@@ -1,0 +1,36 @@
+struct XModel
+{
+  const char *name;
+  unsigned __int8 numBones;
+  unsigned __int8 numRootBones;
+  unsigned __int8 numsurfs;
+  unsigned __int8 lodRampType;
+  $C8C573B57ACA1D7542AD56C4163862EC ___u5;
+  $37E13A30061EC97EDA76440B3BA5E97A ___u6;
+  $BF9640C0B3AB5E078C286DD9616EC22F ___u7;
+  $E1CD6A013C1D28F2956F4983A8D1052C ___u8;
+  unsigned __int8 *partClassification;
+  DObjAnimMat *baseMat;
+  XSurface *surfs;
+  Material **materialHandles;
+  XModelLodInfo lodInfo[4];
+  XModelCollSurf_s *collSurfs;
+  int numCollSurfs;
+  int contents;
+  $F6C538633D9383460A765AA61F1AD673 ___u17;
+  float radius;
+  vec3_t mins;
+  vec3_t maxs;
+  __int16 numLods;
+  __int16 collLod;
+  float *himipInvSqRadii;
+  int memUsage;
+  int flags;
+  bool bad;
+  PhysPreset *physPreset;
+  unsigned __int8 numCollmaps;
+  Collmap *collmaps;
+  PhysConstraints *physConstraints;
+  vec3_t lightingOriginOffset;
+  float lightingOriginRange;
+};
